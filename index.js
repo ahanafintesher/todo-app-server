@@ -35,12 +35,12 @@ async function run() {
     const database = client.db("todo");
     const tasksCollection = database.collection('tasks')
 
+    // post a task
     app.post('/api/tasks', async(req,res)=>{
         const task = req.body;
         const result = await tasksCollection.insertOne(task);
         res.send(result)
     })
-   
     
     
     await client.db("admin").command({ ping: 1 });
