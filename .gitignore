@@ -79,3 +79,4 @@ public/uploads/
 # Mac
 .AppleDouble
 .LSOverride
+.vercel
